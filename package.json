@@ -5,12 +5,13 @@
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "npm run clean & gatsby build --prefix-links && npm run copy",
+    "build": "npm run clean & gatsby build && npm run copy",
     "serve": "gatsby serve-build",
+    "sb": "npm run build && npm run serve",
     "clean:public": "rm -rf public",
     "clean:docs": "rm -rf docs/*",
     "clean": "npm run clean:public & npm run clean:docs",
-    "copy": "cp public/* docs",
+    "copy": "cp -rf public/* docs",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build --prefix-links && gh-pages -d public"
