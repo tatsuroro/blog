@@ -5,11 +5,12 @@
   "main": "n/a",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "npm run clean & gatsby build & copy",
+    "build": "npm run clean & gatsby build --prefix-links && npm run copy",
+    "serve": "gatsby serve-build",
     "clean:public": "rm -rf public",
-    "clean": "npm run clean:public",
-    "copy:files": "cp pages/*.{pdf,txt,png,jpg,jpeg,gif} public/",
-    "copy": "npm run copy:files",
+    "clean:docs": "rm -rf docs/*",
+    "clean": "npm run clean:public & npm run clean:docs",
+    "copy": "cp public/* docs",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gatsby build --prefix-links && gh-pages -d public"
@@ -60,7 +61,6 @@
     "redbox-react": "^1.2.10",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
-    "autoprefixer": "^6.3.7",
     "file-loader": "^0.9.0",
     "rucksack-css": "^0.8.5",
     "lost": "^7.0.3"
