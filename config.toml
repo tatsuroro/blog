@@ -1,0 +1,10 @@
+siteTitle = "tatsuroro.com"
+siteDescr = "FrontEnd Developer at Fukuoka, Japan"
+siteAuthor = "tatsuroro"
+
+siteTwitterUrl = "https://twitter.com/tatsuroro"
+siteGithubUrl = "https://github.com/tatsuroro"
+siteEmailUrl = "/contact/"
+siteRssUrl = "#"
+
+linkPrefix = "/"
