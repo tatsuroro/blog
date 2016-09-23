@@ -13,8 +13,7 @@
     "clean": "npm run clean:public & npm run clean:docs",
     "copy": "cp -rf public/* docs",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gatsby build --prefix-links && gh-pages -d public"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "gatsby",
@@ -53,7 +52,6 @@
     "eslint-plugin-import": "^1.12.0",
     "eslint-plugin-jsx-a11y": "^2.0.1",
     "eslint-plugin-react": "^6.0.0",
-    "gh-pages": "^0.11.0",
     "image-webpack-loader": "^2.0.0",
     "null-loader": "^0.1.1",
     "postcss-loader": "^0.9.1",
