@@ -11,7 +11,8 @@
     "clean:public": "rm -rf public",
     "clean:docs": "rm -rf docs/*",
     "clean": "npm run clean:public & npm run clean:docs",
-    "copy": "cp -rf public/* docs",
+    "copy:cname": "cp ./CNAME ./docs",
+    "copy": "cp -r public/* docs && npm run copy:cname",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
